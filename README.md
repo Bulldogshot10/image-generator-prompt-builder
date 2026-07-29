@@ -2,7 +2,7 @@
 
 AI skill untuk mengubah prompt gambar mentah menjadi prompt yang lebih rapi, detail, dan siap dipakai di image generator.
 
-Skill utama ada di folder [`image-prompt-builder/`](image-prompt-builder/). Repository README ini dibuat supaya halaman utama GitHub langsung menampilkan cara kerja skill, bukan hanya judul repo.
+
 
 ## Model yang didukung
 
