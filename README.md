@@ -108,7 +108,6 @@ image-generator-prompt-builder/
 ├── README.md
 └── image-prompt-builder/
     ├── SKILL.md
-    ├── README.md
     ├── agents/
     │   └── openai.yaml
     └── references/
@@ -178,6 +177,7 @@ Render the exact headline "NIGHT BREW" once, large and clearly legible at the to
 
 ## Isi guideline per model
 
+- [`image-prompt-builder/SKILL.md`](image-prompt-builder/SKILL.md): aturan utama skill.
 - [`gpt-image-2.md`](image-prompt-builder/references/gpt-image-2.md): guideline untuk GPT Image 2, termasuk quality, size, text rendering, ads, logos, diagrams, edits, dan consistency.
 - [`nano-banana-pro.md`](image-prompt-builder/references/nano-banana-pro.md): guideline untuk Nano Banana Pro / Gemini 3 Pro Image, termasuk advanced creative control, localization, brand consistency, text, references, dan edits.
 - [`nano-banana-2.md`](image-prompt-builder/references/nano-banana-2.md): guideline untuk Nano Banana 2 / Gemini 3.1 Flash Image, termasuk general prompting, references, text rendering, creative direction, dan search-aware visuals.
