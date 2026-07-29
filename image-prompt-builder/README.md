@@ -2,75 +2,15 @@
 
 `image-prompt-builder` adalah AI skill untuk mengubah prompt gambar mentah dari user menjadi prompt yang lebih rapi, jelas, dan siap ditempel ke image generator.
 
+> Untuk tutorial install lengkap via `curl`, `npx`, Codex, Claude Code, dan Cursor, buka [`../README.md`](../README.md#install). File ini hanya menjelaskan isi folder skill supaya dokumentasi tidak dobel dan tidak terlihat konflik dengan root README.
+
+## Model yang didukung
+
 Skill ini mendukung optimasi prompt untuk:
 
 - **GPT Image 2** (`gpt-image-2`)
 - **Nano Banana Pro** (`gemini-3-pro-image`)
 - **Nano Banana 2** (`gemini-3.1-flash-image`)
-
-## Install
-
-Dari root repository, kamu bisa install skill ini ke beberapa AI coding tools.
-
-### Codex
-
-```bash
-# via curl
-curl -fsSL https://raw.githubusercontent.com/Bulldogshot10/image-generator-prompt-builder/main/install.sh | bash
-
-# via npx
-npx github:Bulldogshot10/image-generator-prompt-builder --target codex
-```
-
-Manual:
-
-```bash
-mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R image-prompt-builder "${CODEX_HOME:-$HOME/.codex}/skills/"
-```
-
-### Claude Code
-
-```bash
-# via curl
-curl -fsSL https://raw.githubusercontent.com/Bulldogshot10/image-generator-prompt-builder/main/install.sh | bash -s -- --target claude
-
-# via npx
-npx github:Bulldogshot10/image-generator-prompt-builder --target claude
-```
-
-Manual:
-
-```bash
-mkdir -p "$HOME/.claude/skills"
-cp -R image-prompt-builder "$HOME/.claude/skills/"
-```
-
-### Cursor
-
-```bash
-# via curl
-curl -fsSL https://raw.githubusercontent.com/Bulldogshot10/image-generator-prompt-builder/main/install.sh | bash -s -- --target cursor
-
-# via npx
-npx github:Bulldogshot10/image-generator-prompt-builder --target cursor
-```
-
-Manual:
-
-```bash
-mkdir -p "$HOME/.cursor/skills"
-cp -R image-prompt-builder "$HOME/.cursor/skills/"
-```
-
-Kalau Cursor kamu memakai folder custom lain, gunakan `--dir /path/to/skills`.
-
-### Semua target sekaligus
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/Bulldogshot10/image-generator-prompt-builder/main/install.sh | bash -s -- --target all --force
-npx github:Bulldogshot10/image-generator-prompt-builder --target all --force
-```
 
 ## Perilaku utama
 
@@ -86,7 +26,7 @@ Setelah model dipilih, skill akan:
 4. Menambahkan struktur prompt yang jelas: subject, scene, composition, style, lighting, camera, text, constraints, dan suggested settings.
 5. Menghasilkan prompt final yang siap dipakai.
 
-## Struktur folder
+## Struktur folder skill
 
 ```text
 image-prompt-builder/
@@ -100,7 +40,15 @@ image-prompt-builder/
     └── nano-banana-2.md
 ```
 
-## Contoh penggunaan
+## File penting
+
+- [`SKILL.md`](SKILL.md): aturan utama skill, termasuk kewajiban bertanya target model sebelum rewrite prompt.
+- [`agents/openai.yaml`](agents/openai.yaml): metadata tampilan skill.
+- [`references/gpt-image-2.md`](references/gpt-image-2.md): guideline prompt GPT Image 2.
+- [`references/nano-banana-pro.md`](references/nano-banana-pro.md): guideline prompt Nano Banana Pro.
+- [`references/nano-banana-2.md`](references/nano-banana-2.md): guideline prompt Nano Banana 2.
+
+## Contoh penggunaan singkat
 
 User:
 
@@ -120,19 +68,18 @@ User:
 Nano Banana Pro
 ```
 
-Assistant akan mengembalikan prompt dengan format seperti:
+Assistant akan mengembalikan prompt siap tempel dengan format:
 
 ```markdown
 **Model:** Nano Banana Pro
 
 **Prompt:**
-Create a vertical 9:16 cyberpunk coffee poster for a premium late-night cafe campaign...
-Render the exact headline "NIGHT BREW" once, in bold neon sans-serif typography...
+<final prompt yang sudah dirapikan untuk Nano Banana Pro>
 
 **Suggested settings:**
-- Aspect ratio / size: 9:16 vertical poster
-- Quality / resolution: 2K or 4K if available
-- Notes: Keep text exact; no extra words or watermark.
+- Aspect ratio / size: <rekomendasi ukuran>
+- Quality / resolution: <rekomendasi kualitas>
+- Notes: <catatan penting, misalnya text harus exact>
 ```
 
 ## Sumber guideline
