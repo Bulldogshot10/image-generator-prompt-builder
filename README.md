@@ -1,5 +1,11 @@
 # Image Generator Prompt Builder
 
+[![License:
+MIT](https://img.shields.io/badge/License-MIT -green.svg)] (LICENSE) ![AI
+Skill](https://img.shields.io/badge/AI-Skill-blue) ![Bahasa](https://img.shields.io/badge/Bahasa -Indonesia-red)
+![Open
+Source](https://img.shields.io/badge/Open %20Source-Yes-brightgreen)
+
 AI skill untuk mengubah prompt gambar mentah menjadi prompt yang lebih rapi, detail, dan siap dipakai di image generator.
 
 
