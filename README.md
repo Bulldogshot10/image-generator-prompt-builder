@@ -6,8 +6,6 @@ AI skill untuk mengubah prompt gambar mentah menjadi prompt yang lebih rapi, det
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![AI Skill](https://img.shields.io/badge/AI-Skill-blue)
 
-AI skill untuk mengubah prompt gambar mentah menjadi prompt yang lebih rapi, detail, dan siap dipakai di image generator.
-
 
 
 ## Model yang didukung
