@@ -1,0 +1,3 @@
+display_name: Image Prompt Builder
+short_description: Model-specific image prompt refiner
+default_prompt: Turn my image idea into a polished prompt. Ask which image model to target first.
