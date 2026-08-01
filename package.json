@@ -1,0 +1,14 @@
+{
+  "name": "image-generator-prompt-builder",
+  "version": "1.0.0",
+  "description": "Installer for the Image Prompt Builder AI skill.",
+  "bin": {
+    "image-prompt-builder-install": "scripts/install.mjs"
+  },
+  "files": [
+    "image-prompt-builder",
+    "scripts/install.mjs",
+    "README.md"
+  ],
+  "license": "MIT"
+}

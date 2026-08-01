@@ -35,6 +35,59 @@ Sources checked July 29, 2026:
 - Restate invariants every time: identity, facial features, proportions, pose, product details, brand assets, typography, layout, lighting, and background when applicable.
 - For translation/localization edits, preserve layout, typography style, placement, spacing, hierarchy, logos, icons, and imagery; translate only the specified text.
 
+## Advanced hacks
+
+- Use `EXACT TEXT:` blocks for typography-heavy images.
+- Repeat critical text constraints in both `Text / layout` and `Constraints`.
+- Add “exactly once”, “no duplicate text”, “no extra words”, and “no watermark” when rendering text.
+- For photorealism, request real-world imperfections: subtle asymmetry, natural skin texture, dust, imperfect fabric, lens softness, realistic reflections.
+- For product/ad images, include target audience, channel, campaign goal, product angle, visual hierarchy, and CTA copy.
+- For edits, state `Change only:` and `Preserve:` as separate lines.
+- For complex layouts, describe canvas regions: top headline zone, center hero subject, lower CTA area, safe margins, and negative space.
+
+## Quality selection cheatsheet
+
+- `low`: thumbnails, rough ideation, fast drafts.
+- `medium`: general polished output and everyday content.
+- `high`: text-heavy posters, diagrams, close portraits, ads, product renders, identity-sensitive edits, and outputs where reruns are expensive.
+
+## Failure-mode guards
+
+- Text hallucination: quote exact copy, say exactly once, and forbid extra text.
+- Over-polished skin: request natural texture, small imperfections, and realistic lighting.
+- Extra logos/watermarks: forbid unrelated marks and preserve supplied logos only.
+- Identity drift: list protected facial/body traits and reference-image role.
+- Cropped hands/products/text: specify safe framing and complete visible subject.
+- Product warping: preserve geometry, label placement, dimensions, and material.
+
+## Steroid template
+
+```text
+Goal:
+Create <asset type> for <use case/audience/channel>.
+
+Scene:
+<environment, subject, action, story moment, visual metaphor>
+
+Composition:
+<aspect ratio, subject placement, foreground/background, negative space, safe text areas>
+
+Visual direction:
+<style/medium, lighting, color palette, materials/textures, camera/framing, realism level>
+
+Text / layout:
+EXACT TEXT: "<copy>"
+Render the text exactly once, clearly legible, with <typography> at <placement>.
+
+Preserve:
+<identity/product/logo/layout elements that must not change>
+
+Avoid:
+<no extra text, no watermark, no unrelated logos, no cropped subject, no warped product>
+
+Suggested settings: size=<size>, quality=<low|medium|high>
+```
+
 ## Template
 
 ```text

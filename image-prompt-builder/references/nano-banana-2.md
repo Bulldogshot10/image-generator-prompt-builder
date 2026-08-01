@@ -33,6 +33,46 @@ Sources checked July 29, 2026:
 - Materials/textures: specify tactile details like brushed steel, velvet, matte plastic, aged paper, skin pores, fabric wear.
 - Layout: specify aspect ratio, centered subject, negative space, panel count, diagram hierarchy, or poster grid.
 
+## When to choose Nano Banana 2
+
+- General text-to-image and everyday creative work.
+- Fast concept exploration and quick social variations.
+- Iterative editing where the user will revise conversationally.
+- Reference-guided work that is not highly brand-critical.
+- Cost/latency-sensitive drafts before moving to Pro.
+
+## When to escalate to Nano Banana Pro
+
+- High-stakes brand consistency.
+- Complex multilingual text or localized layouts.
+- Dense infographics or factual diagrams.
+- Professional packaging, advertising, or UI systems.
+- Many references with strict role separation.
+
+## Fast iteration hacks
+
+- Ask for 3 variants with controlled differences: composition, color palette, and lighting.
+- Keep subject and constraints stable across variants.
+- Use short `revise only <element>` prompts after the first result.
+- Use `preserve all previous approved elements` after the user likes a draft.
+- Prefer positive framing first; add negative constraints only for common failure modes.
+
+## Search-aware prompt pattern
+
+```text
+Use current information about <topic/date/source>. Create a visual explanation of <insight>.
+Show <layout>. Include only the exact labels <labels>. Avoid unsupported claims.
+```
+
+## Editing loop template
+
+```text
+Starting from the previous image, change only <specific element>.
+Keep <identity/composition/style/text> unchanged.
+Do not add new objects or text.
+Preserve all previous approved elements.
+```
+
 ## Template
 
 ```text

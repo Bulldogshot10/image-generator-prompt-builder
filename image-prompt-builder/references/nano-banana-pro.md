@@ -45,6 +45,71 @@ For multiple references, follow: `[Reference images] + [Relationship instruction
 - Use semantic masking in words: “change only the sky,” “remove only the car in the background,” etc.
 - For style transfer, ask to preserve exact content/pose/composition while changing only the artistic style.
 
+## Best use cases
+
+- Premium brand assets, ad campaigns, packaging, and launch visuals.
+- Multilingual posters, localized product mockups, and international creative.
+- Dense infographics, educational diagrams, explainers, and data visuals.
+- Complex scene planning with high visual hierarchy requirements.
+- Reference-heavy compositions and consistent characters/products.
+- Professional output where text accuracy, reasoning, and 4K detail matter.
+
+## Pro prompt hacks
+
+- Label reference roles explicitly: `Image A = identity`, `Image B = outfit`, `Image C = environment`, `Image D = brand palette`.
+- Use hierarchy wording: primary subject, secondary props, background, negative space, text zone, CTA zone.
+- Use localization blocks: `Language`, `Exact text`, `Do not translate`, `Preserve layout`.
+- For factual diagrams, include data/date/source requirements and ask for a clearly labeled visual explanation.
+- For brand consistency, define logo handling, palette, type style, tone, layout grid, and forbidden deviations.
+- Use studio language: three-point lighting, softbox, rim light, macro product photography, color grading, lens/focus feel.
+- For revisions, edit the approved image instead of rerolling from scratch when the image is mostly correct.
+
+## Nano Banana Pro guardrails
+
+- No accidental rebranding or invented logos.
+- No text outside quoted copy.
+- Preserve uploaded identity/reference roles.
+- Preserve package dimensions and product geometry.
+- Avoid making factual diagrams if source facts are missing.
+- Avoid mixing visual roles across references.
+
+## Mega template
+
+```text
+Objective:
+Create <asset type> for <audience/channel> that communicates <message>.
+
+Reference roles:
+<Image A/B/C roles or “no references”>.
+
+Scene and story:
+<subject, action, world, emotional beat, real-world or fictional context>.
+
+Composition:
+<aspect ratio, grid, visual hierarchy, primary/secondary zones, negative space>.
+
+Typography and localization:
+Language: <language>.
+Exact text: "<copy>".
+Do not translate: <terms>.
+Placement and style: <typography instructions>.
+
+Style and production direction:
+<aesthetic, lighting, camera, color grading, materials, finish, detail level>.
+
+Brand consistency:
+<logo role, palette, typography, tone, layout rules>.
+
+World-knowledge/data requirement:
+<facts, date, sources, or “do not invent facts”>.
+
+Constraints:
+<no extra text, no watermark, preserve identity/brand/layout, factual accuracy>
+
+Resolution:
+<1K/2K/4K if available>
+```
+
 ## Template
 
 ```text
